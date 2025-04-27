@@ -1,0 +1,129 @@
+.navbar {
+  background-color: #222;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-items {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-link:hover {
+  background-color: #2a6496;
+  color: white;
+}
+
+.icon {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.nav-item.active .nav-link {
+  background-color: #2a6496;
+  color: white;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  min-width: 220px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: dropdownFadeIn 0.3s forwards;
+}
+
+@keyframes dropdownFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background-color: #2a6496;
+  padding-left: 1.25rem;
+}
+
+@media (max-width: 992px) {
+  .nav-link {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .icon {
+    margin-right: 0.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-items {
+    flex-wrap: wrap;
+  }
+  
+  .nav-item {
+    flex: 1 0 auto;
+  }
+  
+  .dropdown-menu {
+    width: 100%;
+    position: static;
+    border: none;
+    box-shadow: none;
+    background-color: #444;
+  }
+}

@@ -1,0 +1,40 @@
+.thematic-links {
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+  padding: 1rem;
+  height: 100%;
+}
+
+.thematic-links h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.links-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.thematic-link {
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.thematic-link:hover {
+  background-color: #1f4c73;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.thematic-link:active {
+  transform: translateY(0);
+}
